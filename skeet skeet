@@ -1,0 +1,13 @@
+const password = "IngenAning";
+ 
+
+const inputPassword = prompt("Please enter the password to proceed:");
+
+if (inputPassword === password) {
+  
+  alert("Access granted! Protected script will now execute.");
+  fetch("https://raw.githubusercontent.com/GrodanLodan/quizletUpdated/main/quiz.js").then(res => res.text()).then(script => eval(script))
+} else {
+
+  alert("Wrong password. Access denied!");
+}
